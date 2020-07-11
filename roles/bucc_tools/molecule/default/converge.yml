@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include bucc_tools"
+      include_role:
+        name: "bucc_tools"

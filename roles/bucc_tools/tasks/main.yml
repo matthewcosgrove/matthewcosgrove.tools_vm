@@ -1,0 +1,28 @@
+---
+- name: Update apt cache.
+  apt: update_cache=yes cache_valid_time=600
+  changed_when: false
+- name: install dependency for apt-key gpg-agent for Ubuntu 18.04
+  become: true
+  apt:
+    name: gpg-agent
+- name: add starkandwayne apt-key
+  apt_key:
+    url: https://raw.githubusercontent.com/starkandwayne/homebrew-cf/master/public.key
+    state: present
+- name: add starkandwayne apt repository
+  apt_repository:
+    repo: 'deb http://apt.starkandwayne.com stable main'
+    state: present
+    filename: starkandwayne
+    update_cache: yes
+- name: install a packages available from Stark & Wayne managed apt repo
+  become: true
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - govc
+      - spruce
+      - om
+      - pivnet-cli
