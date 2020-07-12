@@ -1,4 +1,4 @@
-name: Molecule Tests
+name: Collection Molecule Tests
 
 on:
   push:
