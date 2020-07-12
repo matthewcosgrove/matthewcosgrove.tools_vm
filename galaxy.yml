@@ -45,13 +45,13 @@ tags: [tools]
 dependencies: {}
 
 # The URL of the originating SCM repository
-repository: https://github.com/matthewcosgrove/ansible-collection-tools_vm.git
+repository: https://github.com/matthewcosgrove/matthewcosgrove.tools_vm.git
 
 # The URL to any online docs
-documentation: https://github.com/matthewcosgrove/ansible-collection-tools_vm.git
+documentation: https://github.com/matthewcosgrove/matthewcosgrove.tools_vm.git
 
 # The URL to the homepage of the collection/project
-homepage: https://github.com/matthewcosgrove/ansible-collection-tools_vm.git
+homepage: https://github.com/matthewcosgrove/matthewcosgrove.tools_vm.git
 
 # The URL to the collection issue tracker
-issues: https://github.com/matthewcosgrove/ansible-collection-tools_vm/issues
+issues: https://github.com/matthewcosgrove/matthewcosgrove.tools_vm/issues
