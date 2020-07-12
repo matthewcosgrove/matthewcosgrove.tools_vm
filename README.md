@@ -1,4 +1,4 @@
-![Collection Molecule Tests](https://github.com/matthewcosgrove/ansible-collection-tools_vm/workflows/Collection%20Molecule%20Tests/badge.svg)
+![Collection Molecule Tests](https://github.com/matthewcosgrove/ansible-collection-tools_vm/workflows/Collection%20Molecule%20Tests/badge.svg) ![BUCC Tools Role Molecule Tests](https://github.com/matthewcosgrove/ansible-collection-tools_vm/workflows/BUCC%20Tools%20Role%20Molecule%20Tests/badge.svg)
 
 # Ansible Collection - matthewcosgrove.tools_vm
 
