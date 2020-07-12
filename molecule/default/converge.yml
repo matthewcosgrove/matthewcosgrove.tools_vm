@@ -1,0 +1,9 @@
+---
+- name: Converge
+  hosts: all
+  collections:
+   - matthewcosgrove.tools_vm
+  tasks:
+    - name: "Include bucc_tools"
+      include_role:
+        name: "bucc_tools"
