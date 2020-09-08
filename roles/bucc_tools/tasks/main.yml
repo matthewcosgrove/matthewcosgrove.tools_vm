@@ -16,7 +16,7 @@
     state: present
     filename: starkandwayne
     update_cache: yes
-- name: install a packages available from Stark & Wayne managed apt repo
+- name: install packages available from Stark & Wayne managed apt repo
   become: true
   apt:
     name: "{{ packages }}"
