@@ -1,2 +1,9 @@
 exclude_paths:
-  - ./roles
+  - ./meta/
+  - ./venv/
+skip_list:
+  - '305'
+  - '306'
+  - '602'
+  - '503'
+
