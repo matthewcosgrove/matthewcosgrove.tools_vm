@@ -50,3 +50,9 @@ molecule --debug test
 cd ~/collections/ansible_collections/matthewcosgrove/tools_vm
 molecule --debug test
 ```
+
+## Release Process via GitHub Actions
+
+Update the version in [galaxy.yml](galaxy.yml) e.g. `version: 1.1.0`
+Create a release with the same version number using convention of prefix with letter v e.g. `v1.1.0` via https://github.com/matthewcosgrove/matthewcosgrove.tools_vm/releases/new 
+Check nothing went wrong https://github.com/matthewcosgrove/matthewcosgrove.tools_vm/actions?query=workflow%3A%22Ansible+Galaxy%22
