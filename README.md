@@ -6,6 +6,13 @@ An opinionated way to set up a Tools VM. Initially for Ubuntu 18.04 only.
 
 ## Development prereqs
 
+Clone the repo into a location as required by `ANSIBLE_COLLECTIONS_PATHS` that enables running the molecule integration tests (See the env var set [here](https://github.com/matthewcosgrove/matthewcosgrove.tools_vm/blob/5282dccc78f6609d9967371cfa0a07cd3074dd12/molecule/default/molecule.yml#L20))
+
+```
+mkdir -p ~/collections/ansible_collections/matthewcosgrove/tools_vm && cd "$_"
+git clone https://github.com/matthewcosgrove/matthewcosgrove.tools_vm.git
+```
+
 Initial installs (for Ubuntu, adapt for other OSs)
 
 ```
@@ -23,5 +30,21 @@ source .venv/bin/activate
 docker --version
 pip3 install -U setuptools pip ansible ansible-lint yamllint 'molecule[docker]'
 molecule --version
+```
+
+## Testing
+
+### Integration test of all roles via collection
+
+```
+# cd into the root of this repo then
+molecule --debug test
+```
+
+### Individual role
+
+```
+# cd into role dir e.g.
+cd ~/collections/ansible_collections/matthewcosgrove/tools_vm
 molecule --debug test
 ```
