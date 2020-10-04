@@ -11,6 +11,8 @@ Clone the repo into a location as required by `ANSIBLE_COLLECTIONS_PATHS` that e
 ```
 mkdir -p ~/collections/ansible_collections/matthewcosgrove/tools_vm && cd "$_"
 git clone https://github.com/matthewcosgrove/matthewcosgrove.tools_vm.git
+# for convenience
+ln -s ~/collections/ansible_collections/matthewcosgrove/tools_vm/ ~/matthewcosgrove.tools_vm
 ```
 
 Initial installs (for Ubuntu, adapt for other OSs)
