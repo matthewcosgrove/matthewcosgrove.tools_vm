@@ -1,0 +1,11 @@
+---
+- name: Converge
+  hosts: all
+  pre_tasks:
+    - name: "Requires ubuntu user"
+      include_role:
+        name: "ubuntu_user"
+  tasks:
+    - name: "Include vim_plugins"
+      include_role:
+        name: "vim_plugins"

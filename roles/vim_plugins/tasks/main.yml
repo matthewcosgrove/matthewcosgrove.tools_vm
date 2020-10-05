@@ -1,0 +1,15 @@
+---
+- name: Requires git
+  apt:
+    name: git
+    update_cache: yes
+- name: Clone the vim plugins
+  git:
+    repo: "https://github.com/{{ item.repo_owner }}/{{ item.repo_name }}.git"
+    dest: "/home/ubuntu/.vim/pack/{{ item.repo_name }}/start/{{ item.repo_name }}/"
+    version: "{{ item.repo_version }}"
+    accept_hostkey: yes
+  loop:
+    - { repo_owner: 'luan', repo_name: 'vim-concourse', repo_version: '7f61ca5d291fddd6d7ff04b03bf347f04bfe4344' }
+    - { repo_owner: 'hashivim', repo_name: 'vim-hashicorp-tools', repo_version: 'd7710ecbcb726f09db3818e44959ea3b7fb5b821' }
+    - { repo_owner: 'pearofducks', repo_name: 'ansible-vim', repo_version: '3.0' }

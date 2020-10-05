@@ -4,12 +4,15 @@
   collections:
    - matthewcosgrove.tools_vm
   tasks:
-    - name: "Include bucc_tools"
-      include_role:
-        name: "bucc_tools"
-    - name: "Include vim"
-      include_role:
-        name: "vim"
     - name: "Include ubuntu_user"
       include_role:
         name: "ubuntu_user"
+    - name: "Include vim"
+      include_role:
+        name: "vim"
+    - name: "Include vim_plugins"
+      include_role:
+        name: "vim_plugins"
+    - name: "Include bucc_tools"
+      include_role:
+        name: "bucc_tools"
