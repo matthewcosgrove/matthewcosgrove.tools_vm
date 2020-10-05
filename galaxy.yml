@@ -9,7 +9,7 @@ namespace: matthewcosgrove
 name: tools_vm
 
 # The version of the collection. Must be compatible with semantic versioning
-version: 0.0.3
+version: version_is_replaced_by_tag_version_in_github_actions_publish_job
 
 # The path to the Markdown (.md) readme file. This path is relative to the root of the collection
 readme: README.md

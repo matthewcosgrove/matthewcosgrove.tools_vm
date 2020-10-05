@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
+    - name: Update galaxy.yml version before deploying to galaxy
+      run: ./.github/scripts/tag_version.sh
     - name: Deploy the collection
       uses: artis3n/ansible_galaxy_collection@v2
       with:
