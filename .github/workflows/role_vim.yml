@@ -3,10 +3,10 @@ name: Vim Role Molecule Tests
 on:
   push:
     branches: [ master ]
-    paths: roles/vim
+    paths: roles/vim/**
   pull_request:
     branches: [ master ]
-    paths: roles/vim
+    paths: roles/vim/**
 
 jobs:
   molecule:

@@ -3,10 +3,10 @@ name: Ubuntu User Role Molecule Tests
 on:
   push:
     branches: [ master ]
-    paths: roles/ubuntu_user
+    paths: roles/ubuntu_user/**
   pull_request:
     branches: [ master ]
-    paths: roles/ubuntu_user
+    paths: roles/ubuntu_user/**
 
 jobs:
   molecule:
