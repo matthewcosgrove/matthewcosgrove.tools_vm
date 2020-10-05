@@ -4,12 +4,16 @@
   tasks:
   - name: Retrieve vim version
     shell: vim --version
+    # noqa 305
+    changed_when: false
     register: results
-  - set_fact:
+  - name: Get line for debug
+    set_fact:
       myvalue: "{{ results.stdout_lines[0] }}"
   - debug:
         var: myvalue
-  - assert:
+  - name: Test version is as expected
+    assert:
       that:
         - "'8.2' in results.stdout_lines[0]"
       fail_msg: "Version of vim should be 8.2"
