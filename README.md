@@ -1,4 +1,6 @@
-![Collection Molecule Tests](https://github.com/matthewcosgrove/ansible-collection-tools_vm/workflows/Collection%20Molecule%20Tests/badge.svg) ![BUCC Tools Role Molecule Tests](https://github.com/matthewcosgrove/ansible-collection-tools_vm/workflows/BUCC%20Tools%20Role%20Molecule%20Tests/badge.svg)
+[![Collection Molecule Tests](https://github.com/matthewcosgrove/ansible-collection-tools_vm/workflows/Collection%20Molecule%20Tests/badge.svg)](https://github.com/matthewcosgrove/matthewcosgrove.tools_vm/actions?query=workflow%3A%22Collection+Molecule+Tests%22)
+[![BUCC Tools Role Molecule Tests](https://github.com/matthewcosgrove/ansible-collection-tools_vm/workflows/BUCC%20Tools%20Role%20Molecule%20Tests/badge.svg)](https://github.com/matthewcosgrove/matthewcosgrove.tools_vm/actions?query=workflow%3A%22BUCC+Tools+Role+Molecule+Tests%22)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-tools__vm-blue)](https://galaxy.ansible.com/matthewcosgrove/tools_vm)
 
 # Ansible Collection - matthewcosgrove.tools_vm
 
