@@ -3,8 +3,10 @@ name: BUCC Tools Role Molecule Tests
 on:
   push:
     branches: [ master ]
+    paths: roles/bucc_tools
   pull_request:
     branches: [ master ]
+    paths: roles/bucc_tools
 
 jobs:
   molecule:
