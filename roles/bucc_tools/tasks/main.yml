@@ -2,6 +2,19 @@
 - name: Update apt cache.
   apt: update_cache=yes cache_valid_time=600
   changed_when: false
+- name: install fundamentals (TODO put in own role)
+  become: true
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - bash-completion
+      - shellcheck
+      - tree
+      - gnupg
+      - wget
+      - nmap
+      - git
 - name: install dependency for apt-key gpg-agent for Ubuntu 18.04
   become: true
   apt:
@@ -26,3 +39,9 @@
       - spruce
       - om
       - pivnet-cli
+- name: clone lab-ops bucc helper for vcenter
+  git:
+    repo: "https://github.com/matthewcosgrove/lab-ops.git"
+    dest: "/home/ubuntu/lab-ops"
+    version: "master"
+    accept_hostkey: yes
