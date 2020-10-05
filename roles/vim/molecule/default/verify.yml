@@ -1,0 +1,16 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+  - name: Retrieve vim version
+    shell: vim --version
+    register: results
+  - set_fact:
+      myvalue: "{{ results.stdout_lines[0] }}"
+  - debug:
+        var: myvalue
+  - assert:
+      that:
+        - "'8.2' in results.stdout_lines[0]"
+      fail_msg: "Version of vim should be 8.2"
+      success_msg: "Version of vim is 8.2"

@@ -1,0 +1,13 @@
+---
+- name: Requires dirmngr package to be installed in order to use the apt-key
+  apt:
+    name: dirmngr
+    update_cache: yes
+- name: Add ppa
+  apt_repository:
+    repo: ppa:jonathonf/vim
+  become: yes
+- name: Install vim from jonathonf/vim ppa
+  apt:
+    name: vim
+    update_cache: yes
