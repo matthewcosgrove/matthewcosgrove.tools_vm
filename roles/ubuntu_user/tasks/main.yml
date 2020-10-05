@@ -1,0 +1,14 @@
+---
+- name: Required executable ssh-keygen from package openssh-client
+  apt:
+    name: openssh-client
+    update_cache: yes
+- name: Ensure group "ubuntu" exists
+  group:
+    name: "ubuntu"
+- name: Create ubuntu user and generate SSH key
+  user:
+    name: "ubuntu"
+    group: "ubuntu"
+    generate_ssh_key: yes
+    force: no

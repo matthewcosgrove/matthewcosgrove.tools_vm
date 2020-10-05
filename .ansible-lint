@@ -2,6 +2,7 @@ exclude_paths:
   - ./meta/
   - ./roles/bucc_tools/meta/
   - ./roles/vim/meta/
+  - ./roles/ubuntu_user/meta/
   - ./venv/
 skip_list:
   - '305'
