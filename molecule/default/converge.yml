@@ -7,3 +7,6 @@
     - name: "Include bucc_tools"
       include_role:
         name: "bucc_tools"
+    - name: "Include vim"
+      include_role:
+        name: "vim"
