@@ -57,7 +57,7 @@ molecule --debug test
 
 ## Release Process via GitHub Actions
 
-1) Create a release with the same version number using convention (see NOTE below) of prefix with letter v e.g. `v1.1.0` via https://github.com/matthewcosgrove/matthewcosgrove.tools_vm/releases/new 
+1) Create a release with the next logical semantic version number using convention (see NOTE below) of prefix with letter v e.g. `v1.1.0` via https://github.com/matthewcosgrove/matthewcosgrove.tools_vm/releases/new 
 2) Check nothing went wrong https://github.com/matthewcosgrove/matthewcosgrove.tools_vm/actions?query=workflow%3A%22Ansible+Galaxy%22
 
-NOTE: The version of `galaxy.yml` is incremented dynamically as part of the GitHub Actions release. It is not currently persisted anywhere, but the version comes from the tag name so the convention above for semantic versioning is essential. See the script used [here](.github/scripts/tag_version.sh)
+NOTE: The version of `galaxy.yml` is incremented dynamically as part of the GitHub Actions release. It is not currently persisted anywhere, but the version comes from the tag name so the convention above for semantic versioning is essential. It must be a tag called vMAJOR.MINOR.PATCH e.g. `v1.1.0`. See the script used [here](.github/scripts/tag_version.sh)
