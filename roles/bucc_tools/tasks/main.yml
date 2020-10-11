@@ -35,6 +35,7 @@
     name: "{{ packages }}"
   vars:
     packages:
+      - bosh-cli
       - govc
       - spruce
       - om
@@ -48,3 +49,4 @@
       - vault
       - safe
       - minica
+      - bosh-bootloader
