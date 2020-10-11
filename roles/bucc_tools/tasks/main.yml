@@ -39,3 +39,12 @@
       - spruce
       - om
       - pivnet-cli
+      - gotcha
+      - jq
+      - yj
+      - hub
+      - direnv
+      - terraform
+      - vault
+      - safe
+      - minica
