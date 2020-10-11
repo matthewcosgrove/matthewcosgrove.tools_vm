@@ -39,9 +39,3 @@
       - spruce
       - om
       - pivnet-cli
-- name: clone lab-ops bucc helper for vcenter
-  git:
-    repo: "https://github.com/matthewcosgrove/lab-ops.git"
-    dest: "/home/ubuntu/lab-ops"
-    version: "master"
-    accept_hostkey: yes
