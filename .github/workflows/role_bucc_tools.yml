@@ -25,3 +25,6 @@ jobs:
       run: |
         cd roles/bucc_tools
         molecule test
+      env:
+        PY_COLOR: '1'
+        ANSIBLE_FORCE_COLOR: '1'
