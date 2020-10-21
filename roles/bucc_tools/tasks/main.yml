@@ -31,7 +31,7 @@
       - libxml2-dev
       - libssl-dev
       - libreadline7
-      - libreadline-dev 
+      - libreadline-dev
       - libyaml-dev
       - libsqlite3-dev
       - sqlite3
