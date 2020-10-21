@@ -2,7 +2,7 @@
 - name: Update apt cache.
   apt: update_cache=yes cache_valid_time=600
   changed_when: false
-- name: install fundamentals (TODO put in own role)
+- name: install fundamentals
   become: true
   apt:
     name: "{{ packages }}"
