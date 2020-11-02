@@ -15,6 +15,7 @@
       - wget
       - nmap
       - git
+      - sshpass
 - name: ensure installation of bosh dependencies in accordance with https://bosh.io/docs/cli-v2-install/#additional-dependencies
   become: true
   apt:
