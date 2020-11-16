@@ -1,0 +1,28 @@
+---
+- name: Update apt cache.
+  apt: update_cache=yes cache_valid_time=600
+  changed_when: false
+- name: install dependency for apt-key gpg-agent for Ubuntu 18.04
+  become: true
+  apt:
+    name: gpg-agent
+- name: add hashicorp apt-key
+  apt_key:
+    url: https://apt.releases.hashicorp.com/gpg
+    state: present
+- name: add hashicorp apt repository
+  apt_repository:
+    repo: 'deb [arch=amd64] https://apt.releases.hashicorp.com bionic main'
+    state: present
+    filename: hashicorp
+    update_cache: yes
+- name: install packages available from hashicorp managed apt repo https://releases.hashicorp.com/
+  become: true
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - packer
+      - terraform
+      - vault
+      - consul
