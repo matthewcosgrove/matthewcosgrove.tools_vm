@@ -17,4 +17,5 @@
     user: ubuntu
     state: present
     key: https://{{ gitlab_fqdn }}/{{ gitlab_username }}.keys
+    validate_certs: "{{ validate_certs }}"
   when: gitlab_username is defined
