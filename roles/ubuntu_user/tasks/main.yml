@@ -17,3 +17,4 @@
     user: ubuntu
     state: present
     key: https://{{ gitlab_fqdn }}/{{ gitlab_username }}.keys
+  when: gitlab_username is defined
