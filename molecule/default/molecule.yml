@@ -19,5 +19,6 @@ provisioner:
   log: true
   env:
     ANSIBLE_COLLECTIONS_PATHS: "~/.ansible/collections:~/collections"
+    GITLAB_USERNAME: ${GITLAB_USERNAME_OVERRIDE:-"matthewcosgrove"}
 verifier:
   name: ansible

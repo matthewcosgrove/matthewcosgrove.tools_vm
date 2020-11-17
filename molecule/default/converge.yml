@@ -3,6 +3,8 @@
   hosts: all
   collections:
    - matthewcosgrove.tools_vm
+  vars:
+   gitlab_username: "{{ lookup('env', 'GITLAB_USERNAME') }}"
   tasks:
     - name: "Include ubuntu_user"
       include_role:

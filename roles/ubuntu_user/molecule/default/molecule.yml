@@ -16,5 +16,7 @@ platforms:
     pre_build_image: true
 provisioner:
   name: ansible
+  env:
+    GITLAB_USERNAME: ${GITLAB_USERNAME_OVERRIDE:-"matthewcosgrove"}
 verifier:
   name: ansible

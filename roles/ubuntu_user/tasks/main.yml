@@ -12,3 +12,8 @@
     group: "ubuntu"
     generate_ssh_key: yes
     force: no
+- name: Set authorized keys taken from GitLab https://${gitlab_fqdn}/${gitlab_username}.keys
+  ansible.posix.authorized_key:
+    user: ubuntu
+    state: present
+    key: https://{{ gitlab_fqdn }}/{{ gitlab_username }}.keys
