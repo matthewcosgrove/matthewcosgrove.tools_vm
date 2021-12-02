@@ -5,6 +5,7 @@
    - matthewcosgrove.tools_vm
   vars:
    gitlab_username: "{{ lookup('env', 'GITLAB_USERNAME') }}"
+   gitlab_fqdn: "{{ lookup('env', 'GITLAB_FQDN') }}"
   tasks:
     - name: "Include ubuntu_user"
       include_role:

@@ -3,10 +3,6 @@ dependency:
   name: galaxy
 driver:
   name: docker
-lint: |
-  set -e
-  yamllint .
-  ansible-lint
 platforms:
   - name: instance
     image: geerlingguy/docker-ubuntu1804-ansible
@@ -20,5 +16,6 @@ provisioner:
   env:
     ANSIBLE_COLLECTIONS_PATHS: "~/.ansible/collections:~/collections"
     GITLAB_USERNAME: ${GITLAB_USERNAME_OVERRIDE:-"matthewcosgrove"}
+    GITLAB_FQDN: ${GITLAB_FQDN_OVERRIDE:-"gitlab.com"}
 verifier:
   name: ansible
